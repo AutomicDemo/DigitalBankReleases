@@ -275,7 +275,7 @@
    	   "CDA|DigitalBankingAppPayment/${BankingApplicationVersion}"
    ],
    "isDisabled":false,
-   "description":"<p>This task will dynamically use Terraform template integration to create our target in GCP.</p><p>Passing the correct runtime variables as dynamic properties</p><p><br /></p><p>{&#34;workflow&#34;: {&#34;/triggerparameters/deploymenttype&#34;: &#34;STANDARD&#34;, &#34;/triggerparameters/release_app&#34;:&#34;payment&#34;,&#34;/triggerparameters/distinct_zone&#34;:&#34;ARA&#34;,&#34;/triggerparameters/deprovision_timeout&#34;:&#34;380&#34;} }</p>",
+   "description":"<p>This task will dynamically use Terraform template integration to create our target in GCP.</p><p>Passing the correct runtime variables as dynamic properties</p><p><br /></p><p>{&#34;work/&#34;: {&#34;/triggerparameters/deploymenttype&#34;: &#34;STANDARD&#34;, &#34;/triggerparameters/release_app&#34;:&#34;payment&#34;,&#34;/triggerparameters/distinct_zone&#34;:&#34;ARA&#34;,&#34;/triggerparameters/deprovision_timeout&#34;:&#34;380&#34;} }</p>",
    "name":"Prov. DEV DigitalBanking Infra.",
    "kind":"Task",
    "plugin":"CDA/2.0.0",
@@ -408,8 +408,8 @@
    "previousTasks":["CDI Test - DigitalBankingAppPayment"],
    "name":"Notify Test Teams of Status",
    "kind":"Task",
-   "plugin":"Flowdock/1.0.2",
-   "endpoint":"Flowdock",
+   "plugin":"Slack/1.1",
+   "endpoint":"Slack",
    "parameters":{"message":"%PhaseStatus-Test%"},"type":"Post Message"
  },
  {
@@ -419,8 +419,8 @@
    "isDisabled":true,
    "name":"Notify Teams of Status",
    "kind":"Task",
-   "plugin":"Flowdock/1.0.2",
-   "endpoint":"Flowdock",
+   "plugin":"Slack/1.1",
+   "endpoint":"Slack",
    "parameters":{"message":"%PhaseStatus-Test%"},"type":"Post Message"
  },
  {
@@ -526,8 +526,8 @@
    "previousTasks":["Deploy DigitalBankingApp"],
    "name":"Notify Ops Teams of Status",
    "kind":"Task",
-   "plugin":"Flowdock/1.0.2",
-   "endpoint":"Flowdock",
+   "plugin":"Slack/1.1",
+   "endpoint":"Slack",
    "parameters":{"message":"%PhaseStatus-Prod%"},"type":"Post Message"
  },
  {
@@ -556,8 +556,8 @@
    "previousTasks":["DigitalBankingAppPayment - update rally stories to released"],
    "name":"Notify Release Owners",
    "kind":"Task",
-   "plugin":"Flowdock/1.0.2",
-   "endpoint":"Flowdock",
+   "plugin":"Slack/1.1",
+   "endpoint":"Slack",
    "parameters":{"message":"%PhaseStatus-Post-Prod%"},"type":"Post Message"
  },
  {

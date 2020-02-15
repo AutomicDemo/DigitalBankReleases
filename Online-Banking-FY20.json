@@ -22,7 +22,7 @@
    "plugin":"Rally Platform/2.5",
    "endpoint":"ClarityRally",
    "parameters":{
-     "project":"Team Everest",
+     "project":"Project TEam",
 	 "importFromChildProject":"false",
 	 "type":"User Story"
     },
@@ -35,7 +35,7 @@
    "plugin":"Rally Platform/2.5",
    "endpoint":"ClarityRally",
    "parameters":{
-     "project":"Team Denali",
+     "project":"API Team",
 	 "importFromChildProject":"false",
 	 "type":"User Story"
     },
@@ -48,7 +48,7 @@
    "plugin":"Rally Platform/2.5",
    "endpoint":"ClarityRally",
    "parameters":{
-     "project":"Team Everest",
+     "project":"Project TEam",
 	 "importFromChildProject":"false",
 	 "type":"User Story"
 	},
@@ -73,7 +73,7 @@
    "name":"2_commitSource",
    "kind":"CommitSource",
    "plugin":"GitHub/1.0.2",
-   "endpoint":"Github",
+   "endpoint":"Github-AutomicDemo",
    "parameters":{
      "owner":"AutomicDemo",
 	 "repository":"DigitalBankingApp"
@@ -86,7 +86,7 @@
    "name":"2_commitSource",
    "kind":"CommitSource",
    "plugin":"GitHub/1.0.2",
-   "endpoint":"Github",
+   "endpoint":"Github-AutomicDemo",
    "parameters":{
      "owner":"AutomicDemo",
 	 "repository":"TixRec"

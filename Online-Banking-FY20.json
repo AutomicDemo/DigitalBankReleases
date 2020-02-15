@@ -96,7 +96,7 @@
  {
    "applicationVersions":[
     "CDA|tixrec/${BankingApplicationVersion}",
-	"CDA|${Banking.releaseName}/${BankingApplicationVersion}",
+	"CDA|DigitalBankingApp/${BankingApplicationVersion}",
 	"CDA|DigitalBankingAppPayment/${BankingApplicationVersion}"
    ],
    "ownerParties":[
@@ -270,8 +270,10 @@
  },
  {
    "phase":"${Banking.releaseName}/${Banking.releaseVersion}/Dev",
-   "applicationVersions":["CDA|${Banking.releaseName}/${BankingApplicationVersion}",
-   "CDA|DigitalBankingAppPayment/${BankingApplicationVersion}"],
+   "applicationVersions":[
+	   "CDA|DigitalBankingApp/${BankingApplicationVersion}",
+   	   "CDA|DigitalBankingAppPayment/${BankingApplicationVersion}"
+   ],
    "isDisabled":false,
    "description":"<p>This task will dynamically use Terraform template integration to create our target in GCP.</p><p>Passing the correct runtime variables as dynamic properties</p><p><br /></p><p>{&#34;workflow&#34;: {&#34;/triggerparameters/deploymenttype&#34;: &#34;STANDARD&#34;, &#34;/triggerparameters/release_app&#34;:&#34;payment&#34;,&#34;/triggerparameters/distinct_zone&#34;:&#34;ARA&#34;,&#34;/triggerparameters/deprovision_timeout&#34;:&#34;380&#34;} }</p>",
    "name":"Prov. DEV DigitalBanking Infra.",
@@ -302,7 +304,7 @@
  },
  {
    "phase":"${Banking.releaseName}/${Banking.releaseVersion}/Dev",
-   "applicationVersions":["CDA|${Banking.releaseName}/${BankingApplicationVersion}"],
+   "applicationVersions":["CDA|DigitalBankingApp/${BankingApplicationVersion}"],
    "isDisabled":false,
    "previousTasks":["Deploy DigitalBankingAppPayment"],
    "name":"Deploy DigitalBankingApp",
@@ -373,7 +375,7 @@
  },
  {
    "phase":"${Banking.releaseName}/${Banking.releaseVersion}/NonProd(Test)",
-   "applicationVersions":["CDA|${Banking.releaseName}/${BankingApplicationVersion}"],
+   "applicationVersions":["CDA|DigitalBankingAppPayment/${BankingApplicationVersion}"],
    "isDisabled":false,
    "previousTasks":["Deploy DigitalBankingAppPayment"],
    "name":"Deploy DigitalBankingApp",
@@ -412,7 +414,7 @@
  },
  {
    "phase":"${Banking.releaseName}/${Banking.releaseVersion}/UAT",
-   "applicationVersions":["CDA|${Banking.releaseName}/${BankingApplicationVersion}",
+   "applicationVersions":["CDA|DigitalBankingAppPayment/${BankingApplicationVersion}",
    "CDA|DigitalBankingAppPayment/${BankingApplicationVersion}"],
    "isDisabled":true,
    "name":"Notify Teams of Status",
@@ -423,7 +425,7 @@
  },
  {
    "phase":"${Banking.releaseName}/${Banking.releaseVersion}/UAT",
-   "applicationVersions":["CDA|${Banking.releaseName}/${BankingApplicationVersion}",
+   "applicationVersions":["CDA|DigitalBankingAppPayment/${BankingApplicationVersion}",
    "CDA|DigitalBankingAppPayment/${BankingApplicationVersion}"],
    "isDisabled":false,
    "previousTasks":["Notify Teams of Status"],
@@ -437,7 +439,7 @@
  },
  {
    "phase":"${Banking.releaseName}/${Banking.releaseVersion}/UAT",
-   "applicationVersions":["CDA|${Banking.releaseName}/${BankingApplicationVersion}",
+   "applicationVersions":["CDA|DigitalBankingApp/${BankingApplicationVersion}",
    "CDA|DigitalBankingAppPayment/${BankingApplicationVersion}"],
    "isDisabled":false,
    "previousTasks":["Create Change Request For Production"],
@@ -472,7 +474,7 @@
  },
  {
    "phase":"${Banking.releaseName}/${Banking.releaseVersion}/Prod",
-   "applicationVersions":["CDA|${Banking.releaseName}/${BankingApplicationVersion}",
+   "applicationVersions":["CDA|DigitalBankingApp/${BankingApplicationVersion}",
    "CDA|DigitalBankingAppPayment/${BankingApplicationVersion}"],
    "isDisabled":false,
    "previousTasks":["Production Monitoring Disabled"],
@@ -504,7 +506,7 @@
  },
  {
    "phase":"${Banking.releaseName}/${Banking.releaseVersion}/Prod",
-   "applicationVersions":["CDA|${Banking.releaseName}/${BankingApplicationVersion}"],
+   "applicationVersions":["CDA|DigitalBankingAppPayment/${BankingApplicationVersion}"],
    "isDisabled":false,
    "previousTasks":["Deploy DigitalBankingAppPayment"],
    "name":"Deploy DigitalBankingApp",

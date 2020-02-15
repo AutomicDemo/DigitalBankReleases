@@ -339,8 +339,8 @@
    "previousTasks":["CDI Test - DigitalBankingAppPayment"],
    "name":"Notify Dev Teams of Status",
    "kind":"Task",
-   "plugin":"Flowdock/1.0.2",
-   "endpoint":"Flowdock",
+   "plugin":"Slack/1.1",
+   "endpoint":"Slack",
    "parameters":{"message":"%PhaseStatus-Dev%"},"type":"Post Message"
  },
  {

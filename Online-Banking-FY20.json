@@ -29,7 +29,7 @@
 	"type":"Add Content"
  },
  {
-   "applicationVersion":"CDA|${Banking.releaseName}/${BankingApplicationVersion}",
+   "applicationVersion":"CDA|DigitalBankingApp/${BankingApplicationVersion}",
    "name":"Digital Banking (copy)",
    "kind":"ContentSource",
    "plugin":"Rally Platform/2.5",
@@ -68,7 +68,7 @@
 	"type":"Get Commit Messages"
  },
  {
-   "applicationVersion":"CDA|${Banking.releaseName}/${BankingApplicationVersion}",
+   "applicationVersion":"CDA|DigitalBankingApp/${BankingApplicationVersion}",
    "commitRegularExpression":"^[ \\\\t]*([A-Za-z0-9_]+)",
    "name":"2_commitSource",
    "kind":"CommitSource",

@@ -38,7 +38,7 @@
  }
  ],
  "reference": {
-   "filename": "Online-Banking-FY20.json",
+   "fileName": "Online-Banking-FY20.json",
    "fileSource": "Github-AutomicDemo"
  }
 }

@@ -438,20 +438,6 @@
    "shortDescription":"%snow_Appdesc%"},"type":"Create Change Request"
  },
  {
-   "phase":"${Banking.releaseName}/${Banking.releaseVersion}/UAT",
-   "applicationVersions":["CDA|DigitalBankingApp/${BankingApplicationVersion}",
-   "CDA|DigitalBankingAppPayment/${BankingApplicationVersion}"],
-   "isDisabled":false,
-   "previousTasks":["Create Change Request For Production"],
-   "name":"E-mail Change Information",
-   "kind":"Task",
-   "plugin":"Email/1.1",
-   "endpoint":"awsapps e-mail server",
-   "parameters":{"subject":"%SnowChgID%: DigitalBankingApp Awaiting Approval for Production Deployment",
-   "to":"cdd.demo@localdemo.com",
-   "body":"Please review the following Change Request to promote the latest DigitalBankingApp code to production:\nhttps://ven01747.service-now.com/nav_to.do?uri=change_request.do?sys_id=%SnowChgID%"},"type":"Send Email"
- },
- {
    "phase":"${Banking.releaseName}/${Banking.releaseVersion}/Prod",
    "isDisabled":false,
    "description":"<p><strong>​</strong><a href=\"https://ven01747.service-now.com/\" style=\"color: rgb(60, 110, 122);\" rel=\"nofollow\"><strong>https://ven01747.service-now.com</strong></a></p>",

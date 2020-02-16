@@ -549,20 +549,6 @@
  {
    "phase":"${Banking.releaseName}/${Banking.releaseVersion}/Post Prod",
    "isDisabled":false,
-   "previousTasks":["Notify Release Owners"],
-   "description":"<p><a href=\"http://www.cnn.com\" rel=\"nofollow\">http://www.cnn.com</a></p>",
-   "name":"Update DigitalBankingApp User Story to Released",
-   "kind":"Task",
-   "plugin":"Rally Platform/2.5",
-   "endpoint":"Rally",
-   "parameters":{"content_item_type":"User Story",
-   "project_name":"Team Denali",
-   "user_story_schedule_state":"Released",
-   "user_story_id":"US291"},"type":"Rally Update"
- },
- {
-   "phase":"${Banking.releaseName}/${Banking.releaseVersion}/Post Prod",
-   "isDisabled":false,
    "previousTasks":["Update DigitalBankingApp User Story to Released"],
    "description":"<p><a href=\"http://www.cnn.com\" rel=\"nofollow\">http://www.cnn.com</a></p>",
    "name":"display report output",
